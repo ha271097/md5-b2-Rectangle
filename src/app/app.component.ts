@@ -1,4 +1,6 @@
+import { areAllEquivalent } from '@angular/compiler/src/output/output_ast';
 import { Component } from '@angular/core';
+import {Rectangle} from "./rectangle";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'md5-b2-th-area';
+   rec = new Rectangle(5,5,10,10);
+
+  xy = this.rec.toString();
+  area = this.rec.area();
+
 }
